@@ -1,0 +1,60 @@
+---
+title: "Python notebook test"
+author: "Paolo Bosetti"
+date: 2025-10-14
+modified-date: today
+format: revealjs
+---
+```{python}
+#| label: load-packages
+#| include: false
+from plotnine import *
+from plotnine.data import penguins
+```
+
+# Section Header
+
+## Slide
+
+::: columns
+::: column
+* RevealJS slides are real powerful
+* Master it to precisely control and tune the layout and appearence
+:::
+
+::: column
+```{python}
+#| code-line-numbers: "|6|9"
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+fig, ax = plt.subplots(subplot_kw={'projection': 'polar'})
+ax.plot(theta, r)
+ax.set_rticks([0.5, 1, 1.5, 2])
+ax.grid(True)
+plt.show()
+```
+:::
+:::
+
+
+## Alternative for side-output
+
+```{python}
+#| echo: true
+#| code-line-numbers: "|6|9"
+#| output-location: column
+import numpy as np
+import matplotlib.pyplot as plt
+
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+fig, ax = plt.subplots(subplot_kw={'projection': 'polar'})
+ax.plot(theta, r)
+ax.set_rticks([0.5, 1, 1.5, 2])
+ax.grid(True)
+plt.show()
+```

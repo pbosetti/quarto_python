@@ -1,0 +1,41 @@
+project: 
+  type: website
+  preview:
+    port: 8888
+
+website:
+  description: Example Python-based interactive website
+  navbar: 
+    left:
+      - href: index.qmd
+        text: Home
+      - href: penguins.qmd
+        text: Penguins
+      - href: presentation.qmd
+        text: Presentation
+
+format:
+  html:
+    toc: true
+    email-obfuscation: "javascript"
+    theme: 
+      - flatly
+  revealjs:
+    theme: solarized
+    width: 1280
+    height: 720
+    margin: 0.1
+    slide-number: true
+    code-line-numbers: true
+    code-annotations: below
+    preview-links: auto
+    chalkboard: true
+    footer: "Examples --- [Home](/index.qmd)"
+    fig-width: 5
+    fig-height: 4
+    fig-dpi: 300
+    touch: true
+    email-obfuscation: javascript
+    pdf-separate-fragments: true
+    link-external-icon: true
+    lang: en-EN
